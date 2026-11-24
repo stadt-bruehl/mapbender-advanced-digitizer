@@ -1,0 +1,55 @@
+mb.advanced_digitizer:
+    class:
+        title: Advanced Digitizer
+        description: Digitizer with angle snapping, length input and live measurement
+    segment: Segment
+    total: Total
+    perimeter: Perimeter
+    angle: Angle
+    absolute: abs
+    relative: rel
+    snap_on: Angle snapping on
+    snap_off: Angle snapping off
+    mode_absolute: Angle snapping absolute
+    mode_relative: Angle snapping relative to previous segment
+    input: Input
+    invalid_input: 'Invalid input. Format: length or length<angle'
+    no_direction: Direction undefined – move the pointer away from the last vertex
+    toolset:
+        addPart: Add part
+        removePart: Remove part
+    part:
+        no_target: 'Select a saved feature of this theme with “Edit” first'
+        last_part: 'The last part of a feature cannot be removed'
+    help:
+        button: Help
+        title: Digitizing help
+        no_tools: This theme offers no drawing tools.
+        drawing:
+            title: Drawing
+            vertices: 'Left-click to set vertices. Finish lines with a double-click, areas with a click on the start point or a double-click.'
+            tooltip: 'While drawing, a box at the pointer shows segment length, total length or perimeter, and angle.'
+            object_snap: 'Close to existing vertices and edges, the point snaps onto them. This takes precedence over angle snapping.'
+        angle:
+            title: Angle snapping
+            snap: 'The direction snaps in %step%° steps if it deviates by at most %tolerance%°. A ✓ next to the angle indicates snapping. Close to the points that finish the sketch, no angle snapping takes place.'
+            toggle: '%key% switches angle snapping on or off.'
+            mode: '%key% switches between absolute angles and angles relative to the previous segment.'
+            reference_north: 'Absolute angles count clockwise from north (90° = east). Relative angles are positive for a turn to the right.'
+            reference_east: 'Absolute angles count counter-clockwise from east (90° = north). Relative angles are positive for a turn to the left.'
+        input:
+            title: Entering length and angle
+            length: 'After the first point, type a length, e.g. 12.5, and confirm with %enter%. The next point is placed 12.5 %unit% away in the direction of the pointer.'
+            angle: 'Length and angle: 12.5<90 places the point 12.5 %unit% away in direction 90°. The first segment always uses the absolute angle.'
+            edit: 'Comma or dot as decimal separator. %backspace% deletes the last character, %escape% discards the input.'
+        parts:
+            title: Parts of areas
+            add: 'Add part: click a saved feature with “Edit”, choose “Add part” and draw the part. More parts can follow right away.'
+            escape: 'With “Add part”, the first %escape% only discards the part in progress; another one ends the tool.'
+            remove: 'Remove part: click a feature with “Edit”, choose “Remove part” and click inside the part. The last part is always kept.'
+            valid: 'Parts must not overlap or share an edge. Otherwise the database alters them on save, e.g. merges them.'
+        finish:
+            title: Cancel and save
+            escape: '%escape% ends the active drawing tool; a sketch in progress is discarded.'
+            save: 'Save changed features with the save button in the table row or with “Save all features”.'
+            revert: 'Discard unsaved geometry changes: right-click the feature, then “Revert geometry changes”.'

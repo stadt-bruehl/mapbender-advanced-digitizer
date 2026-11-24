@@ -1,0 +1,55 @@
+mb.advanced_digitizer:
+    class:
+        title: Datenerfassung erweitert (Advanced Digitizer)
+        description: Digitizer mit Winkelraster, Längeneingabe und Live-Messung
+    segment: Segment
+    total: Gesamt
+    perimeter: Umfang
+    angle: Winkel
+    absolute: abs
+    relative: rel
+    snap_on: Winkelraster an
+    snap_off: Winkelraster aus
+    mode_absolute: Winkelraster absolut
+    mode_relative: Winkelraster relativ zum Vorsegment
+    input: Eingabe
+    invalid_input: 'Ungültige Eingabe. Format: Länge oder Länge<Winkel'
+    no_direction: Keine Richtung bestimmbar – Mauszeiger vom letzten Stützpunkt wegbewegen
+    toolset:
+        addPart: Teil hinzufügen
+        removePart: Teil entfernen
+    part:
+        no_target: 'Zuerst mit „Bearbeiten“ ein gespeichertes Objekt dieses Themas auswählen'
+        last_part: 'Der letzte Teil eines Objekts kann nicht entfernt werden'
+    help:
+        button: Hilfe
+        title: Hilfe zur Datenerfassung
+        no_tools: In diesem Thema gibt es keine Zeichenwerkzeuge.
+        drawing:
+            title: Zeichnen
+            vertices: 'Stützpunkte mit Linksklick setzen. Linien mit Doppelklick beenden, Flächen mit Klick auf den Startpunkt oder mit Doppelklick.'
+            tooltip: 'Während des Zeichnens zeigt ein Feld am Mauszeiger Segmentlänge, Gesamtlänge bzw. Umfang und Winkel.'
+            object_snap: 'Nahe an vorhandenen Stützpunkten und Kanten rastet der Punkt dort ein. Das hat Vorrang vor dem Winkelraster.'
+        angle:
+            title: Winkelraster
+            snap: 'Die Richtung rastet in %step%°-Schritten ein, wenn sie höchstens %tolerance%° davon abweicht. Ein ✓ am Winkel zeigt das Einrasten an. Nahe an den Punkten, mit denen sich die Skizze abschließen lässt, rastet kein Winkel ein.'
+            toggle: '%key% schaltet das Winkelraster ein oder aus.'
+            mode: '%key% wechselt zwischen absoluten Winkeln und Winkeln relativ zum vorigen Segment.'
+            reference_north: 'Absolute Winkel zählen ab Norden im Uhrzeigersinn (90° = Osten). Relative Winkel sind bei einem Knick nach rechts positiv.'
+            reference_east: 'Absolute Winkel zählen ab Osten gegen den Uhrzeigersinn (90° = Norden). Relative Winkel sind bei einem Knick nach links positiv.'
+        input:
+            title: Länge und Winkel eingeben
+            length: 'Nach dem ersten Punkt eine Länge tippen, z. B. 12,5, und mit %enter% bestätigen. Der nächste Punkt liegt dann 12,5 %unit% entfernt in Richtung des Mauszeigers.'
+            angle: 'Länge und Winkel: 12,5<90 setzt den Punkt 12,5 %unit% entfernt in Richtung 90°. Beim ersten Segment gilt immer der absolute Winkel.'
+            edit: 'Komma oder Punkt als Dezimaltrenner. %backspace% löscht das letzte Zeichen, %escape% verwirft die Eingabe.'
+        parts:
+            title: Teile von Flächen
+            add: 'Teil hinzufügen: Mit „Bearbeiten“ ein gespeichertes Objekt anklicken, dann „Teil hinzufügen“ wählen und den Teil zeichnen. Weitere Teile können sofort folgen.'
+            escape: 'Bei „Teil hinzufügen“ verwirft das erste %escape% nur den angefangenen Teil, ein weiteres beendet das Werkzeug.'
+            remove: 'Teil entfernen: Mit „Bearbeiten“ ein Objekt anklicken, dann „Teil entfernen“ wählen und in den Teil klicken. Der letzte Teil bleibt erhalten.'
+            valid: 'Teile dürfen sich nicht überlappen und keine gemeinsame Kante haben. Sonst verändert die Datenbank sie beim Speichern, z. B. werden sie zusammengelegt.'
+        finish:
+            title: Abbrechen und Speichern
+            escape: '%escape% beendet das aktive Zeichenwerkzeug, eine angefangene Skizze geht dabei verloren.'
+            save: 'Geänderte Objekte mit dem Speichern-Knopf in der Tabellenzeile oder mit „Alle Objekte speichern“ sichern.'
+            revert: 'Ungespeicherte Geometrieänderungen verwerfen: Rechtsklick auf das Objekt, dann „Geometrieänderung zurücknehmen“.'

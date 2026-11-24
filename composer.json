@@ -1,0 +1,15 @@
+{
+    "name": "stadt-bruehl/mapbender-advanced-digitizer",
+    "description": "Mapbender Digitizer extension: angle snapping, length input, live measurement, add/remove parts of multipolygons",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+        "mapbender/mapbender": "^5.0",
+        "mapbender/digitizer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mapbender\\AdvancedDigitizerBundle\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.mb-advdig-tooltip {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font: 12px/1.4 monospace;
+  white-space: nowrap;
+  pointer-events: none;
+
+  .mb-advdig-snapped {
+    color: #7fd67f;
+  }
+
+  .mb-advdig-off {
+    color: #aaa;
+  }
+
+  .mb-advdig-input {
+    color: #ffd75e;
+  }
+}
+
+.mb-advdig-part-add,
+.mb-advdig-part-remove {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: -0.5em;
+    bottom: -0.4em;
+    font: bold 0.8em/1 sans-serif;
+  }
+}
+
+.mb-advdig-part-add::after {
+  content: "+";
+}
+
+.mb-advdig-part-remove::after {
+  content: "\2212";
+}
+
+.mb-advdig-help {
+  h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.75rem 0 0.25rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  li + li {
+    margin-top: 0.25rem;
+  }
+}
